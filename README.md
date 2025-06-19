@@ -2,11 +2,13 @@
 
 ![NPM Version](https://img.shields.io/npm/v/@tamago-labs/smart-contract-mcp)
 
-**Smart Contract MCP** is a comprehensive Model Context Protocol (MCP) server implementation for smart contract development via CLI. It currently supports Aptos CLI and Sui CLI, with more to come.
+**Smart Contract MCP** is a comprehensive Model Context Protocol (MCP) server implementation for smart contract development via CLI. It supports **Aptos CLI**, **Sui CLI**, and **Foundry** for comprehensive blockchain development across Move and Solidity ecosystems.
 
 ## Features
-- **30+ MCP tools** ready to use for smart contract development on Sui and Aptos
-- **Comprehensive CLI integration** for Move smart contract development and testing
+- **50+ MCP tools** ready to use for smart contract development
+- **Multi-blockchain support**: Aptos (Move), Sui (Move), Ethereum/EVM (Solidity)
+- **Comprehensive CLI integration** for Move and Solidity smart contract development and testing
+- **Production-ready tools** for deployment, testing, and contract interaction
 
 ## Using with Claude Desktop
 
@@ -29,7 +31,72 @@
 }
 ```
 
+## Prerequisites
+
+Before using this MCP, ensure you have the required CLI tools installed:
+
+### For Ethereum/EVM Development (Foundry)
+```bash
+# Install Foundry
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+```
+
+### For Aptos Development
+```bash
+# Install Aptos CLI
+curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
+```
+
+### For Sui Development
+```bash
+# Install Sui CLI
+cargo install --locked --git https://github.com/MystenLabs/sui.git --branch testnet sui
+```
+
 ## Available Tools
+
+### Foundry CLI Integration (Ethereum/EVM)
+
+#### Project Management
+| Tool Name | Description | Example Usage |
+|-----------|-------------|---------------|
+| `foundry_cli_init` | Initialize a new Foundry project | "Create a new Solidity project called 'my-defi-protocol'" |
+| `foundry_cli_build` | Compile smart contracts using Forge | "Compile my smart contracts with optimization" |
+| `foundry_cli_test` | Run smart contract tests | "Run all tests with gas reporting" |
+| `foundry_cli_clean` | Clean build artifacts and cache | "Clean all build files" |
+| `foundry_cli_format` | Format Solidity code | "Format all Solidity files in my project" |
+
+#### Deployment & Contract Interaction
+| Tool Name | Description | Example Usage |
+|-----------|-------------|---------------|
+| `foundry_cli_deploy` | Deploy smart contracts to networks | "Deploy MyToken contract to mainnet" |
+| `foundry_cli_call` | Call read-only contract functions | "Check token balance of address 0x123..." |
+| `foundry_cli_send` | Send transactions to contracts | "Transfer 100 tokens to address 0x456..." |
+| `foundry_cli_verify` | Verify contracts on Etherscan | "Verify MyToken contract on Etherscan" |
+
+#### Network & Blockchain Query
+| Tool Name | Description | Example Usage |
+|-----------|-------------|---------------|
+| `foundry_cli_get_balance` | Get ETH balance of accounts | "Check ETH balance of 0x123..." |
+| `foundry_cli_get_transaction` | Get transaction details by hash | "Get details for transaction 0xabc..." |
+| `foundry_cli_get_receipt` | Get transaction receipt | "Get receipt for transaction 0xdef..." |
+| `foundry_cli_get_block` | Get block information | "Get latest block information" |
+| `foundry_cli_get_gas_price` | Get current gas price | "Check current gas price on mainnet" |
+| `foundry_cli_estimate_gas` | Estimate gas for transactions | "Estimate gas for token transfer" |
+| `foundry_cli_get_chain_id` | Get network chain ID | "Get chain ID for current network" |
+
+#### Utilities & Conversion
+| Tool Name | Description | Example Usage |
+|-----------|-------------|---------------|
+| `foundry_cli_convert` | Convert between number formats | "Convert 1 ETH to wei" |
+| `foundry_cli_generate_wallet` | Generate new wallet/keypair | "Create a new Ethereum wallet" |
+| `foundry_cli_get_address` | Get address from private key | "Get address for my private key" |
+| `foundry_cli_sign_message` | Sign messages with private key | "Sign 'Hello World' message" |
+| `foundry_cli_get_selector` | Calculate function selectors | "Get selector for transfer(address,uint256)" |
+| `foundry_cli_encode_data` | Encode function call data | "Encode transfer function call data" |
+| `foundry_cli_decode_data` | Decode transaction data | "Decode transaction input data" |
+| `foundry_cli_get_storage` | Get contract storage values | "Read storage slot 0 from contract" |
 
 ### Aptos CLI Integration
 
@@ -91,7 +158,6 @@
 | `sui_cli_switch_address` | Change the active address | "Switch to address 0x456..." |
 | `sui_cli_switch_env` | Switch network environment | "Switch to testnet" |
 | `sui_cli_envs` | List all configured environments | "Show all network configurations" |
-
 
 ## License
 This project is licensed under the MIT License.

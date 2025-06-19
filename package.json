@@ -1,7 +1,7 @@
 {
     "name": "@tamago-labs/smart-contract-mcp",
-    "version": "0.1.1",
-    "description": "MCP server implementation for smart contract development",
+    "version": "0.2.0",
+    "description": "MCP server implementation for smart contract development across Aptos, Sui, and Ethereum ecosystems",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
@@ -23,6 +23,10 @@
     "keywords": [
         "aptos",
         "sui",
+        "ethereum",
+        "evm",
+        "foundry",
+        "solidity",
         "move",
         "blockchain",
         "ai-agent",
