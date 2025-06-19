@@ -11,7 +11,7 @@ import {
 
 export const GetTransactionByHashTool: McpTool = {
     name: "aptos_cli_get_transaction_by_hash",
-    description: "Get transaction by hash using CLI",
+    description: "Get transaction by hash using Aptos CLI",
     schema: {
         transactionHash: z.string().describe("Transaction hash to query")
     },
@@ -35,7 +35,7 @@ export const GetTransactionByHashTool: McpTool = {
 
 export const GetTransactionByVersionTool: McpTool = {
     name: "aptos_cli_get_transaction_by_version",
-    description: "Get transaction by version number",
+    description: "Get transaction by version number on Aptos",
     schema: {
         version: z.number().describe("Transaction version number")
     },
@@ -59,7 +59,7 @@ export const GetTransactionByVersionTool: McpTool = {
 
 export const GetAccountTransactionsTool: McpTool = {
     name: "aptos_cli_get_account_transactions",
-    description: "Get account transaction history",
+    description: "Get account transaction history on Aptos",
     schema: {
         accountAddress: z.string().describe("Account address"),
         limit: z.number().optional().describe("Maximum number of transactions to return"),
@@ -88,7 +88,7 @@ export const GetAccountTransactionsTool: McpTool = {
 
 export const SimulateTransactionTool: McpTool = {
     name: "aptos_cli_simulate_transaction",
-    description: "Simulate a transaction without executing it",
+    description: "Simulate a transaction without executing it on Aptos",
     schema: {
         sender: z.string().describe("Sender address"),
         functionId: z.string().describe("Function to call"),
@@ -124,7 +124,7 @@ export const SimulateTransactionTool: McpTool = {
 
 export const GetEventsByCreationNumberTool: McpTool = {
     name: "aptos_cli_get_events_by_creation_number",
-    description: "Get events by creation number",
+    description: "Get events by creation number on Aptos",
     schema: {
         accountAddress: z.string().describe("Account that created the events"),
         creationNumber: z.number().describe("Event creation number"),
@@ -158,7 +158,7 @@ export const GetEventsByCreationNumberTool: McpTool = {
 
 export const GetEventsByHandleTool: McpTool = {
     name: "aptos_cli_get_events_by_handle",
-    description: "Get events by event handle",
+    description: "Get events by event handle on Aptos",
     schema: {
         accountAddress: z.string().describe("Account address"),
         eventHandle: z.string().describe("Event handle (struct type)"),

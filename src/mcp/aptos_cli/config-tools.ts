@@ -14,7 +14,7 @@ import {
 
 export const GetCurrentNetworkTool: McpTool = {
     name: "aptos_cli_get_network",
-    description: "Get current network configuration",
+    description: "Get current network configuration on Aptos CLI",
     schema: {},
     handler: async (input: Record<string, any>) => {
         const result = await getCurrentNetwork();
@@ -36,7 +36,7 @@ export const GetCurrentNetworkTool: McpTool = {
 
 export const SetNetworkTool: McpTool = {
     name: "aptos_cli_set_network",
-    description: "Set the current network",
+    description: "Set the current network on Aptos CLI",
     schema: {
         network: z.string().describe("Network name (mainnet, testnet, devnet, or custom URL)"),
         profile: z.string().optional().describe("Optional profile name")
@@ -91,7 +91,7 @@ export const InitConfigTool: McpTool = {
 
 export const ListProfilesTool: McpTool = {
     name: "aptos_cli_list_profiles",
-    description: "List all configured profiles",
+    description: "List all configured profiles on Aptos CLI",
     schema: {},
     handler: async (input: Record<string, any>) => {
         const result = await listProfiles();
@@ -113,7 +113,7 @@ export const ListProfilesTool: McpTool = {
 
 export const SwitchProfileTool: McpTool = {
     name: "aptos_cli_switch_profile",
-    description: "Switch to a different profile",
+    description: "Switch to a different profile on Aptos CLI",
     schema: {
         profileName: z.string().describe("Profile name to switch to")
     },
@@ -137,7 +137,7 @@ export const SwitchProfileTool: McpTool = {
 
 export const ShowGlobalConfigTool: McpTool = {
     name: "aptos_cli_show_global_config",
-    description: "Show global configuration settings",
+    description: "Show global configuration settings on Aptos CLI",
     schema: {},
     handler: async (input: Record<string, any>) => {
         const result = await showGlobalConfig();
@@ -159,7 +159,7 @@ export const ShowGlobalConfigTool: McpTool = {
 
 export const GetNodeInfoTool: McpTool = {
     name: "aptos_cli_get_node_info",
-    description: "Get node information including chain ID and version",
+    description: "Get node information including chain ID and version on Aptos CLI",
     schema: {
         nodeUrl: z.string().optional().describe("Optional node URL (uses configured network if not provided)")
     },
@@ -183,7 +183,7 @@ export const GetNodeInfoTool: McpTool = {
 
 export const GetLedgerInfoTool: McpTool = {
     name: "aptos_cli_get_ledger_info",
-    description: "Get current ledger information",
+    description: "Get current ledger information on Aptos CLI",
     schema: {},
     handler: async (input: Record<string, any>) => {
         const result = await getLedgerInfo();
@@ -205,7 +205,7 @@ export const GetLedgerInfoTool: McpTool = {
 
 export const GetNetworkPeersTool: McpTool = {
     name: "aptos_cli_get_network_peers",
-    description: "Get network peers information",
+    description: "Get network peers information on Aptos CLI",
     schema: {},
     handler: async (input: Record<string, any>) => {
         const result = await getNetworkPeers();

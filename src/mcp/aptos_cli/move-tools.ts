@@ -13,7 +13,7 @@ import {
 
 export const InitMovePackageTool: McpTool = {
     name: "aptos_cli_move_init",
-    description: "Initialize a new Move package",
+    description: "Initialize a new Aptos Move package",
     schema: {
         packageName: z.string().describe("Name of the package"),
         path: z.string().optional().describe("Directory path where to create the package")
@@ -38,7 +38,7 @@ export const InitMovePackageTool: McpTool = {
 
 export const CompileMovePackageTool: McpTool = {
     name: "aptos_cli_move_compile",
-    description: "Compile a Move package",
+    description: "Compile a Aptos Move package",
     schema: {
         packagePath: z.string().describe("Path to the Move package"),
         dev: z.boolean().optional().describe("Compile in dev mode"),
@@ -69,7 +69,7 @@ export const CompileMovePackageTool: McpTool = {
 
 export const TestMovePackageTool: McpTool = {
     name: "aptos_cli_move_test",
-    description: "Run tests for a Move package",
+    description: "Run tests for a Aptos Move package",
     schema: {
         packagePath: z.string().describe("Path to the Move package"),
         filter: z.string().optional().describe("Test filter pattern"),
@@ -100,7 +100,7 @@ export const TestMovePackageTool: McpTool = {
 
 export const PublishMovePackageTool: McpTool = {
     name: "aptos_cli_move_publish",
-    description: "Publish a Move package to the blockchain",
+    description: "Publish a Aptos Move package to the blockchain",
     schema: {
         packagePath: z.string().describe("Path to the Move package"),
         namedAddresses: z.record(z.string()).optional().describe("Named addresses mapping"),
@@ -131,7 +131,7 @@ export const PublishMovePackageTool: McpTool = {
 
 export const RunMoveFunctionTool: McpTool = {
     name: "aptos_cli_move_run",
-    description: "Run a Move function",
+    description: "Run a Aptos Move function",
     schema: {
         functionId: z.string().describe("Function identifier (address::module::function)"),
         functionArgs: z.array(z.string()).optional().describe("Function arguments"),
@@ -163,7 +163,7 @@ export const RunMoveFunctionTool: McpTool = {
 
 export const CleanMovePackageTool: McpTool = {
     name: "aptos_cli_move_clean",
-    description: "Clean Move package build artifacts",
+    description: "Clean Aptos Move package build artifacts",
     schema: {
         packagePath: z.string().describe("Path to the Move package")
     },
@@ -187,7 +187,7 @@ export const CleanMovePackageTool: McpTool = {
 
 export const DownloadMoveDependenciesTool: McpTool = {
     name: "aptos_cli_move_download",
-    description: "Download Move package dependencies",
+    description: "Download Aptos Move package dependencies",
     schema: {
         packagePath: z.string().describe("Path to the Move package")
     },
@@ -211,7 +211,7 @@ export const DownloadMoveDependenciesTool: McpTool = {
 
 export const ProveMovePackageTool: McpTool = {
     name: "aptos_cli_move_prove",
-    description: "Prove Move package (formal verification)",
+    description: "Prove Aptos Move package (formal verification)",
     schema: {
         packagePath: z.string().describe("Path to the Move package"),
         namedAddresses: z.record(z.string()).optional().describe("Named addresses mapping")

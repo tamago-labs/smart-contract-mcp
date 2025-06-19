@@ -35,7 +35,7 @@ export const CreateAccountTool: McpTool = {
 
 export const GetAccountInfoTool: McpTool = {
     name: "aptos_cli_get_account_info",
-    description: "Get account information including sequence number and authentication key",
+    description: "Get account information including sequence number and authentication key on Aptos",
     schema: {
         accountAddress: z.string().describe("Account address to query")
     },
@@ -59,7 +59,7 @@ export const GetAccountInfoTool: McpTool = {
 
 export const ListAccountsTool: McpTool = {
     name: "aptos_cli_list_accounts",
-    description: "List all accounts in the local configuration",
+    description: "List all accounts in the local configuration on Aptos",
     schema: {},
     handler: async (input: Record<string, any>) => {
         const result = await listAccounts();
@@ -81,7 +81,7 @@ export const ListAccountsTool: McpTool = {
 
 export const GetAccountResourcesTool: McpTool = {
     name: "aptos_cli_get_account_resources",
-    description: "Get account resources (coins, tokens, etc.)",
+    description: "Get account resources (coins, tokens, etc.) on Aptos",
     schema: {
         accountAddress: z.string().describe("Account address to query")
     },
@@ -105,7 +105,7 @@ export const GetAccountResourcesTool: McpTool = {
 
 export const GetAccountModulesTool: McpTool = {
     name: "aptos_cli_get_account_modules",
-    description: "Get published modules on an account",
+    description: "Get published modules on an account on Aptos",
     schema: {
         accountAddress: z.string().describe("Account address to query")
     },
